@@ -1,0 +1,17 @@
+1) To find how many TCP ports that target machine used 
+- nmap 10.129.12.43 
+
+2) After running a "Security Snapshot", the browser is redirected to a path of the format /[something]/[id], where [id] represents the id number of the scan. What is the [something]?
+- http://10.129.12.43/data/4 ( data )
+
+3) Are you able to get to other users' scans?
+- wfuzz -c -z http://10.129.12.43/scans/FUZZ
+
+4) What is the ID of the PCAP file that contains sensative data?
+- The answer is 0 because when i try to apply ftp filter inside the PCAP file to find any sensitive data such as Password or Username of the user i cannot get, so since the field is empthy there is no sensitive data.
+
+5) Which application layer protocol in the pcap file can the sensetive data be found in?
+- ftp ( File Transfer Protocal ) 
+
+6) We've managed to collect nathan's FTP password. On what other service does this password work?
+- SSH ( Secure Shell ) 
